@@ -14,9 +14,16 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4 Routing code
-app.get("/", function (req, res) {
-  res.end("HELLO WORLD");
+app.post("/create-item", (req, res) => {
+  console.log(req.body);
+  res.json({ test: "success" });
 });
+
+app.get("/", function (req, res) {
+  res.render("harid");
+}); 
+
+// 5: Server code
 
 const server = http.createServer(app);
 let PORT = 3000;
