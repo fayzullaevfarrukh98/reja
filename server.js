@@ -21,7 +21,7 @@ app.post("/create-item", (req, res) => {
 
 app.get("/", function (req, res) {
   res.render("harid");
-}); git 
+});
 
 // 5: Server code
 
