@@ -16,7 +16,7 @@
   flex-direction: row;
   align-items: center;
   margin-top: 2px;
-  background: #f7f6b9;
+  /* background: #f7f6b9; */
 }
 
 .main_frame .left_frame {
@@ -101,7 +101,7 @@
 }
 
 .main_frame .left_2 .about .item .title {
-  background-color: #ffb400;
+  background-color: #d9d9d9;
   padding: 3px;
   font-weight: bold;
 }
