@@ -86,5 +86,8 @@ function countLetter(letter, word) {
     if (harf === letter) count++;
   return count;
 }
+console.log("test");
 
+console.log(countLetter("a", "banana"));
+console.log("------------------------------")
 console.log(countLetter("e", "engineer"));
