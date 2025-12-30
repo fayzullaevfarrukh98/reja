@@ -80,14 +80,29 @@
 
 // A task
 
-function countLetter(letter, word) {
+// function countLetter(letter, word) {
+//   let count = 0;
+//   for (let harf of word) 
+//     if (harf === letter) count++;
+//   return count;
+// }
+// console.log("test");
+
+// console.log(countLetter("a", "banana"));
+// console.log("------------------------------")
+// console.log(countLetter("e", "engineer"));
+
+// B task ---------------------------------
+
+function countNumbers(text) {
   let count = 0;
-  for (let harf of word) 
-    if (harf === letter) count++;
+  for (let raqam of text) {
+    if (raqam >= "0" && raqam <= "9") {
+      count++;
+    }
+  }
   return count;
 }
-console.log("test");
 
-console.log(countLetter("a", "banana"));
-console.log("------------------------------")
-console.log(countLetter("e", "engineer"));
+console.log(countNumbers("mjsgfw38695wd287hhcnjkj9r7hunj"));     
+console.log(countNumbers("894piowurhyh97493!qwdhb826472")); 
