@@ -7,7 +7,7 @@ const fs = require("fs");
 
 // MongoDB chaqirish
 const db = require("./server").db();
-const  mongodb = require("mongodb");
+const mongodb = require("mongodb");
 // let user;
 // fs.readFile("database/user.json", "utf-8", (err, data) => {
 //   if (err) {
@@ -32,18 +32,18 @@ app.post("/create_item", (req, res) => {
   console.log("user entered /create_item");
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-   console.log(data.ops);
-    res.json(data.ops[0]); 
+    console.log(data.ops);
+    res.json(data.ops[0]);
   });
 });
 
 app.post("/delete_item", (req, res) => {
   const id = req.body.id;
-  console.log(id)
+  console.log(id);
   db.collection("plans").deleteOne(
-    { _id: new mongodb.ObjectID(id) }, 
-    function(err, data) {
-      res.json({ state:"success" });
+    { _id: new mongodb.ObjectID(id) },
+    function (err, data) {
+      res.json({ state: "success" });
     }
   );
 });
@@ -53,7 +53,7 @@ app.post("/delete_item", (req, res) => {
 // });
 
 app.get("/", function (req, res) {
-  console.log('user entered /');
+  console.log("user entered /");
   db.collection("plans")
     .find()
     .toArray((err, data) => {

@@ -26,7 +26,7 @@ document.getElementById("create_form").addEventListener("submit", function (e) {
 
   axios
     .post("/create_item", { reja: create_field.value })
-    .then((data) => {
+    .then((response) => {
       document
         .getElementById("item_list")
         .insertAdjacentHTML("beforeend", itemTemplate(response.data));
