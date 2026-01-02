@@ -65,17 +65,27 @@
           >
             <%= item.reja %>
             <div>
-              <button class="btn btn-outline-primary" data-id="<%= item._id %>">
+              <button
+                class="edit-me btn btn-secondary btn-sm mr-1"
+                data-id="<%= item._id %>"
+              >
                 Ozgartirish
               </button>
-              <button class="btn btn-outline-danger" data-id="<%= item._id %>">
+              <button
+                class="delete-me btn btn-danger btn-sm"
+                data-id="<%= item._id %>"
+              >
                 Ochirish
               </button>
             </div>
           </li>
           <% }); %>
         </ul>
-        <button id="clean-all" class="btn btn-danger">
+        <button
+          id="clean-all"
+          class="btn btn-danger"
+          style="border-radius: 20px"
+        >
           Barcha rejalarni ochirish
         </button>
       </div>
