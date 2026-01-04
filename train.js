@@ -1,5 +1,5 @@
 // console.log("Train task ishga tushdi");
-// console.log("------------------------------");
+console.log("------------------------------");
 
 // console.log("Jack Ma maslahatlari:");
 // const list = [
@@ -107,39 +107,54 @@
 // console.log(countNumbers("mjsgfw38695wd287hhcnjkj9r7hunj"));     
 // console.log(countNumbers("894piowurhyh97493!qwdhb826472")); 
 
-// Task c---------------------------------
+// // Task c---------------------------------
 
-const moment = require("moment");
-let realTime = moment().format("HH:mm");
+// const moment = require("moment");
+// let realTime = moment().format("HH:mm");
 
-class Shop {
-  constructor(non, kola, lagmon) {
-    this.non = non;
-    this.kola = kola;
-    this.lagmon = lagmon;
+// class Shop {
+//   constructor(non, kola, lagmon) {
+//     this.non = non;
+//     this.kola = kola;
+//     this.lagmon = lagmon;
+//   }
+//   qoldiq() {
+//     console.log(
+//       `Hozir ${realTime}'da ${this.non}'ta non,  ${this.kola}'ta kola va ${this.lagmon}'ta lagmon bor`
+//     );
+//   }
+//   sotish(product, count) {
+//     if (count > this.non) {
+//       console.log("non yetarli emas");
+//     }
+//     this.non -= count;
+//     console.log(`${count} ta ${product} sotildi`);
+//   }
+//   qabul(product, count) {
+//     this.lagmon += count;    
+//     console.log(`${count} ta ${product} qabul qilindi`);
+//   }
+// }
+
+// const shop = new Shop(4, 5, 2);
+// shop.qoldiq();
+// shop.sotish("non", 3);
+// shop.qoldiq();
+// shop.qabul("cola", 4);
+// shop.qoldiq();
+// shop.sotish("non", 2);
+
+// TASK D---------------------------------
+
+function checkContent(soz1, soz2) {
+  if (soz1.length !== soz2.length) {
+    return false;
   }
-  qoldiq() {
-    console.log(
-      `Hozir ${realTime}'da ${this.non}'ta non,  ${this.kola}'ta kola va ${this.lagmon}'ta lagmon bor`
-    );
-  }
-  sotish(product, count) {
-    if (count > this.non) {
-      console.log("non yetarli emas");
-    }
-    this.non -= count;
-    console.log(`${count} ta ${product} sotildi`);
-  }
-  qabul(product, count) {
-    this.lagmon += count;    
-    console.log(`${count} ta ${product} qabul qilindi`);
-  }
+
+  let sorted1 = soz1.split("").sort().join("");
+  let sorted2 = soz2.split("").sort().join("");
+  return sorted1 === sorted2;
 }
 
-const shop = new Shop(4, 5, 2);
-shop.qoldiq();
-shop.sotish("non", 3);
-shop.qoldiq();
-shop.qabul("cola", 4);
-shop.qoldiq();
-shop.sotish("non", 2);
+console.log(checkContent("mitgroup", "gmtiprou")); // true
+console.log(checkContent("hello", "world"));       // false
