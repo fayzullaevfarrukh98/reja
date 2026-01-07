@@ -55,10 +55,10 @@ console.log("------------------------------");
 //   else if (a > 50 && a <= 60) return list[4];
 //   else {
 //     return list[5];
-    // setTimeout (function () {
-    //   callback(null, list[5]);
-    // }, 1000);
-  
+// setTimeout (function () {
+//   callback(null, list[5]);
+// }, 1000);
+
 // then/catch
 // console.log("passed here");
 // JackMaslahatBering(25).then((data) => {
@@ -82,7 +82,7 @@ console.log("------------------------------");
 
 // function countLetter(letter, word) {
 //   let count = 0;
-//   for (let harf of word) 
+//   for (let harf of word)
 //     if (harf === letter) count++;
 //   return count;
 // }
@@ -104,8 +104,8 @@ console.log("------------------------------");
 //   return count;
 // }
 
-// console.log(countNumbers("mjsgfw38695wd287hhcnjkj9r7hunj"));     
-// console.log(countNumbers("894piowurhyh97493!qwdhb826472")); 
+// console.log(countNumbers("mjsgfw38695wd287hhcnjkj9r7hunj"));
+// console.log(countNumbers("894piowurhyh97493!qwdhb826472"));
 
 // // Task c---------------------------------
 
@@ -131,7 +131,7 @@ console.log("------------------------------");
 //     console.log(`${count} ta ${product} sotildi`);
 //   }
 //   qabul(product, count) {
-//     this.lagmon += count;    
+//     this.lagmon += count;
 //     console.log(`${count} ta ${product} qabul qilindi`);
 //   }
 // }
@@ -146,15 +146,31 @@ console.log("------------------------------");
 
 // TASK D---------------------------------
 
-function checkContent(soz1, soz2) {
-  if (soz1.length !== soz2.length) {
-    return false;
+// function checkContent(soz1, soz2) {
+//   if (soz1.length !== soz2.length) {
+//     return false;
+//   }
+
+//   let sorted1 = soz1.split("").sort().join("");
+//   let sorted2 = soz2.split("").sort().join("");
+//   return sorted1 === sorted2;
+// }
+
+// console.log(checkContent("mitgroup", "gmtiprou")); // true
+// console.log(checkContent("hello", "world"));       // false
+
+// Task E-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+function getReverse(word) {
+  let reversed = "";
+
+  for (let i = word.length - 1; i >= 0; i--) {
+    reversed += word[i];
   }
 
-  let sorted1 = soz1.split("").sort().join("");
-  let sorted2 = soz2.split("").sort().join("");
-  return sorted1 === sorted2;
+  return reversed;
 }
 
-console.log(checkContent("mitgroup", "gmtiprou")); // true
-console.log(checkContent("hello", "world"));       // false
+console.log(getReverse("hello"));
+console.log(getReverse("world"));
+console.log(getReverse("431853"));
