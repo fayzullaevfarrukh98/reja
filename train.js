@@ -161,16 +161,38 @@ console.log("------------------------------");
 
 // Task E-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-function getReverse(word) {
-  let reversed = "";
+// function getReverse(word) {
+//   let reversed = "";
 
-  for (let i = word.length - 1; i >= 0; i--) {
-    reversed += word[i];
+//   for (let i = word.length - 1; i >= 0; i--) {
+//     reversed += word[i];
+//   }
+
+//   return reversed;
+// }
+
+// console.log(getReverse("hello"));
+// console.log(getReverse("world"));
+// console.log(getReverse("431853"));
+
+// Task F ---------------------------------
+
+function findDoublers(word) {
+  let soz = new Set();
+
+  for (let char of word) {
+    if (soz.has(char)) {
+      return true; 
+    }
+    soz.add(char);
   }
 
-  return reversed;
+  return false; 
 }
 
-console.log(getReverse("hello"));
-console.log(getReverse("world"));
-console.log(getReverse("431853"));
+
+console.log(findDoublers("hello"));
+console.log(findDoublers("array"));
+console.log(findDoublers("string"));
+console.log(findDoublers("world"));
+
